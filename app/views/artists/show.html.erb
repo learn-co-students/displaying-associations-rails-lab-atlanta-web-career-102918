@@ -1,0 +1,12 @@
+<h1> Check out the fan page for this one...</h1>
+
+<h3><%= @artist.name %></h3>
+
+<h4>This artist has produced <%= @artist.song_count %> songs.
+<h4>Check'em out. <%= @artist.name %></h4>
+
+<ul>
+<%@artist.songs.each do |s| %>
+<li>  <%= link_to s.title, song_path(s.id) %></li>
+<% end %>
+</ul>
